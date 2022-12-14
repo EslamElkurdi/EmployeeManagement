@@ -25,6 +25,14 @@ namespace EmployeeManagement
             cmd.Connection = con;
         }
 
+        public DataTable GetData(string Query)
+        {
+            dt = new DataTable();
+            sda = new SqlDataAdapter(Query, con);
+            sda.Fill(dt);
+            return dt;
+        }
+
         
-}
+    }
 }
