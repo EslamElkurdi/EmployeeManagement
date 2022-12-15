@@ -178,6 +178,7 @@ namespace EmployeeManagement
             this.EmpList.RowTemplate.Height = 28;
             this.EmpList.Size = new System.Drawing.Size(776, 299);
             this.EmpList.TabIndex = 69;
+            this.EmpList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.EmpList_CellContentClick);
             // 
             // EmpGender
             // 
@@ -248,6 +249,7 @@ namespace EmployeeManagement
             this.button1.TabIndex = 63;
             this.button1.Text = "UPDATE";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label9
             // 

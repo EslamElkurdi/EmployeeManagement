@@ -112,5 +112,54 @@ namespace EmployeeManagement
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (EmpName.Text == "" || EmpGender.SelectedIndex == -1 || EmpDepartment.SelectedIndex == -1 || EmpSalary.Text == "")
+                {
+                    MessageBox.Show("Missing data");
+                }
+                else
+                {
+                    string Emp = EmpName.Text;
+                    string Gen = EmpGender.SelectedItem.ToString();
+                    string Dep = EmpDepartment.SelectedValue.ToString();
+                    string DDb = dateTimePicker1.Value.ToString("yyyy-MM-dd");
+                    string jDate = dateTimePickerJoin.Value.ToString("yyyy-MM-dd");
+                    int Salary = Convert.ToInt32(EmpSalary.Text);
+                    string Query = "Update into EmployeeTbl set EmpName ='{0}', EmpGen ='{1}',EmpDep ='{2}', EmpDDB='{3}',EmpJDate='{4}',EmpSal='{5}'where key={6}";
+                    Query = string.Format(Query, Emp, Gen, Dep, DDb, jDate, Salary, key);
+                    Con.SetData(Query);
+                    MessageBox.Show("Updated...");
+                    ShowEmp();
+                    clear();
+                }
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.Message);
+            }
+        }
+        int key = 0;
+        private void EmpList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            EmpName.Text = EmpList.SelectedRows[0].Cells[1].Value.ToString();
+            EmpGender.Text = EmpList.SelectedRows[0].Cells[2].Value.ToString();
+            EmpDepartment.SelectedValue = EmpList.SelectedRows[0].Cells[3].Value.ToString();
+            dateTimePicker1.Text = EmpList.SelectedRows[0].Cells[4].Value.ToString();
+            dateTimePickerJoin.Text = EmpList.SelectedRows[0].Cells[5].Value.ToString();
+            EmpSalary.Text = EmpList.SelectedRows[0].Cells[6].Value.ToString();
+            if (EmpName.Text == "")
+            {
+                key = 0;
+            }
+            else
+            {
+                key = Convert.ToInt32(EmpList.SelectedRows[0].Cells[0].Value.ToString());
+            }
+
+        }
     }
 }
