@@ -89,7 +89,7 @@ namespace EmployeeManagement
                     string DDb = dateTimePicker1.Value.ToString("yyyy-MM-dd");
                     string jDate = dateTimePickerJoin.Value.ToString("yyyy-MM-dd");
                     int Salary = Convert.ToInt32(EmpSalary.Text);
-                    string Query = "insert into EmployeeTbl values ('{0}','{1}','{2}','{3}','{4}','{5}')";
+                    string Query = "insert into EmployeeTb1 values ('{0}','{1}','{2}','{3}','{4}','{5}')";
                     Query = string.Format(Query, Emp, Gen, Dep, DDb, jDate, Salary);
                     Con.SetData(Query);
                     MessageBox.Show("Added...");
@@ -129,7 +129,7 @@ namespace EmployeeManagement
                     string DDb = dateTimePicker1.Value.ToString("yyyy-MM-dd");
                     string jDate = dateTimePickerJoin.Value.ToString("yyyy-MM-dd");
                     int Salary = Convert.ToInt32(EmpSalary.Text);
-                    string Query = "Update into EmployeeTbl set EmpName ='{0}', EmpGen ='{1}',EmpDep ='{2}', EmpDDB='{3}',EmpJDate='{4}',EmpSal='{5}'where key={6}";
+                    string Query = "Update EmployeeTb1 set EmpName ='{0}', EmpGen ='{1}',EmpDep ='{2}', EmpDOB='{3}',EmpJDate='{4}',EmpSal='{5}' where EmpId={6}";
                     Query = string.Format(Query, Emp, Gen, Dep, DDb, jDate, Salary, key);
                     Con.SetData(Query);
                     MessageBox.Show("Updated...");
@@ -151,6 +151,7 @@ namespace EmployeeManagement
             dateTimePicker1.Text = EmpList.SelectedRows[0].Cells[4].Value.ToString();
             dateTimePickerJoin.Text = EmpList.SelectedRows[0].Cells[5].Value.ToString();
             EmpSalary.Text = EmpList.SelectedRows[0].Cells[6].Value.ToString();
+
             if (EmpName.Text == "")
             {
                 key = 0;
@@ -172,10 +173,10 @@ namespace EmployeeManagement
                 }
                 else
                 {
-                    string Query = "Delete from EmployeeTb1 where key={0}";
+                    string Query = "Delete from EmployeeTb1 where EmpId={0}";
                     Query = string.Format(Query, key);
                     Con.SetData(Query);
-                    MessageBox.Show("Updated...");
+                    MessageBox.Show("Deleted...");
                     ShowEmp();
                     clear();
                 }

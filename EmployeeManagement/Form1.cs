@@ -16,5 +16,25 @@ namespace EmployeeManagement
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "" || textBox2.Text == "")
+            {
+                MessageBox.Show("Missing Data!!!");
+            }
+            else if (textBox1.Text == "Abdo" && textBox2.Text == "Abdo")
+            {
+                Form2 obj = new Form2();
+                obj.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Incorect Username Or Password");
+                textBox1.Text = "";
+                textBox2.Text = "";
+            }
+        }
     }
 }

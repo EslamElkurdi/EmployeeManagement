@@ -29,6 +29,10 @@ namespace EmployeeManagement
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label14 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -38,7 +42,6 @@ namespace EmployeeManagement
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.EmpList = new System.Windows.Forms.DataGridView();
             this.EmpGender = new System.Windows.Forms.ComboBox();
             this.EmpDepartment = new System.Windows.Forms.ComboBox();
             this.dateTimePickerJoin = new System.Windows.Forms.DateTimePicker();
@@ -60,13 +63,15 @@ namespace EmployeeManagement
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.deletebtn = new System.Windows.Forms.Button();
+            this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
+            this.EmpList = new Guna.UI2.WinForms.Guna2DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EmpList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.EmpList)).BeginInit();
             this.SuspendLayout();
             // 
             // label14
@@ -167,19 +172,6 @@ namespace EmployeeManagement
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 70;
             this.pictureBox2.TabStop = false;
-            // 
-            // EmpList
-            // 
-            this.EmpList.BackgroundColor = System.Drawing.Color.White;
-            this.EmpList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.EmpList.Location = new System.Drawing.Point(413, 326);
-            this.EmpList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.EmpList.Name = "EmpList";
-            this.EmpList.RowHeadersWidth = 62;
-            this.EmpList.RowTemplate.Height = 28;
-            this.EmpList.Size = new System.Drawing.Size(776, 299);
-            this.EmpList.TabIndex = 69;
-            this.EmpList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.EmpList_CellContentClick);
             // 
             // EmpGender
             // 
@@ -414,11 +406,64 @@ namespace EmployeeManagement
             this.deletebtn.UseVisualStyleBackColor = false;
             this.deletebtn.Click += new System.EventHandler(this.deletebtn_Click);
             // 
+            // EmpList
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.EmpList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.EmpList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.EmpList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.EmpList.DefaultCellStyle = dataGridViewCellStyle3;
+            this.EmpList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.EmpList.Location = new System.Drawing.Point(447, 317);
+            this.EmpList.Name = "EmpList";
+            this.EmpList.RowHeadersVisible = false;
+            this.EmpList.RowHeadersWidth = 51;
+            this.EmpList.RowTemplate.Height = 24;
+            this.EmpList.Size = new System.Drawing.Size(730, 273);
+            this.EmpList.TabIndex = 80;
+            this.EmpList.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.EmpList.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.EmpList.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.EmpList.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.EmpList.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.EmpList.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.EmpList.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.EmpList.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.EmpList.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.EmpList.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmpList.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.EmpList.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.EmpList.ThemeStyle.HeaderStyle.Height = 4;
+            this.EmpList.ThemeStyle.ReadOnly = false;
+            this.EmpList.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.EmpList.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.EmpList.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmpList.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.White;
+            this.EmpList.ThemeStyle.RowsStyle.Height = 24;
+            this.EmpList.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.EmpList.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.EmpList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.EmpList_CellContentClick);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1371, 718);
+            this.Controls.Add(this.EmpList);
             this.Controls.Add(this.deletebtn);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.pictureBox4);
@@ -429,7 +474,6 @@ namespace EmployeeManagement
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.EmpList);
             this.Controls.Add(this.EmpGender);
             this.Controls.Add(this.EmpDepartment);
             this.Controls.Add(this.dateTimePickerJoin);
@@ -459,10 +503,10 @@ namespace EmployeeManagement
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EmpList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.EmpList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -479,7 +523,6 @@ namespace EmployeeManagement
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.DataGridView EmpList;
         private System.Windows.Forms.ComboBox EmpGender;
         private System.Windows.Forms.ComboBox EmpDepartment;
         private System.Windows.Forms.DateTimePicker dateTimePickerJoin;
@@ -501,5 +544,7 @@ namespace EmployeeManagement
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button deletebtn;
+        private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
+        private Guna.UI2.WinForms.Guna2DataGridView EmpList;
     }
 }
