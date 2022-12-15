@@ -67,7 +67,7 @@ namespace EmployeeManagement
             this.DepList.RowTemplate.Height = 28;
             this.DepList.Size = new System.Drawing.Size(1161, 405);
             this.DepList.TabIndex = 47;
-            this.DepList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            //this.DepList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // addBtn
             // 

@@ -17,7 +17,7 @@ namespace EmployeeManagement
         {
             InitializeComponent();
             con = new Functions();
-            ListDepartment();
+            ShowListDepartment();
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -25,20 +25,41 @@ namespace EmployeeManagement
 
         }
 
+
+
+
+        int key = 0;
         private void button1_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                if (DepNameTb.Text == "")
+                {
+                    MessageBox.Show("Missing data");
+                }
+                else
+                {
+                    string Dep = DepNameTb.Text;
+                    string Query = "Update DepartmentTb1 set DepName = '{0}' where DepId = {1}";
+                    Query = string.Format(Query, DepNameTb.Text, key);
+                    con.SetData(Query);
+                    ShowListDepartment();
+                    MessageBox.Show("Updated...");
+                    //clear();
+                }
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.Message);
+            }
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+        
 
 
 
 
-        private void ListDepartment()
+        private void ShowListDepartment()
         {
             try {
 
@@ -51,9 +72,13 @@ namespace EmployeeManagement
                 MessageBox.Show(ex.ToString());
 
             }
+
+
             
 
         }
+
+        // Create Add button Code in Department
 
         private void addBtn_Click(object sender, EventArgs e)
         {
@@ -68,7 +93,7 @@ namespace EmployeeManagement
                     string Query = "insert into DepartmentTb1 values ('{0}')";
                     Query = String.Format(Query,DepNameTb.Text);
                     con.SetData(Query);
-                    ListDepartment();
+                    ShowListDepartment();
                     MessageBox.Show("Added Item!!");
                     DepNameTb.Text = "";
 
