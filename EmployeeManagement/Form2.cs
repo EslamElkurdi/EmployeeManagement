@@ -161,5 +161,30 @@ namespace EmployeeManagement
             }
 
         }
+
+        private void deletebtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (key == 0)
+                {
+                    MessageBox.Show("Missing data");
+                }
+                else
+                {
+                    string Query = "Delete from EmployeeTb1 where key={0}";
+                    Query = string.Format(Query, key);
+                    Con.SetData(Query);
+                    MessageBox.Show("Updated...");
+                    ShowEmp();
+                    clear();
+                }
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.Message);
+            }
+
+        }
     }
 }

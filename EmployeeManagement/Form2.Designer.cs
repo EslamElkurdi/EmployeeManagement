@@ -59,6 +59,7 @@ namespace EmployeeManagement
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.deletebtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -399,11 +400,26 @@ namespace EmployeeManagement
             this.panel1.Size = new System.Drawing.Size(1371, 84);
             this.panel1.TabIndex = 50;
             // 
+            // deletebtn
+            // 
+            this.deletebtn.BackColor = System.Drawing.Color.Teal;
+            this.deletebtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deletebtn.ForeColor = System.Drawing.Color.White;
+            this.deletebtn.Location = new System.Drawing.Point(738, 641);
+            this.deletebtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.deletebtn.Name = "deletebtn";
+            this.deletebtn.Size = new System.Drawing.Size(128, 41);
+            this.deletebtn.TabIndex = 79;
+            this.deletebtn.Text = "DELETE";
+            this.deletebtn.UseVisualStyleBackColor = false;
+            this.deletebtn.Click += new System.EventHandler(this.deletebtn_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1371, 718);
+            this.Controls.Add(this.deletebtn);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
@@ -484,5 +500,6 @@ namespace EmployeeManagement
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button deletebtn;
     }
 }
