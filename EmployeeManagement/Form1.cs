@@ -23,7 +23,7 @@ namespace EmployeeManagement
             {
                 MessageBox.Show("Missing Data!!!");
             }
-            else if (textBox1.Text == "Abdo" && textBox2.Text == "Abdo")
+            else if (textBox1.Text == "Eslam" && textBox2.Text == "Password")
             {
                 Form2 obj = new Form2();
                 obj.Show();

@@ -64,7 +64,7 @@ namespace EmployeeManagement
             try {
 
                 string Query = "select * from DepartmentTb1";
-                DepList.DataSource = con.GetData(Query);
+                guna2DataGridView1.DataSource = con.GetData(Query);
 
 
             } catch (Exception ex) {
@@ -107,6 +107,46 @@ namespace EmployeeManagement
         }
 
 
+        int Key = 0;
+        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DepNameTb.Text = guna2DataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+            if (DepNameTb.Text == "")
+            {
+                Key = 0;
+            }
+            else
+            {
+                Key = Convert.ToInt32(guna2DataGridView1.SelectedRows[0].Cells[0].Value.ToString());
+            }
+        }
 
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Form2 obj = new Form2();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            Department obj = new Department();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            Salaries obj = new Salaries();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            Form1 obj = new Form1();
+            obj.Show();
+            this.Hide();
+        }
     }
 }
