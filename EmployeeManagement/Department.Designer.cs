@@ -29,10 +29,10 @@ namespace EmployeeManagement
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.DepList = new System.Windows.Forms.DataGridView();
+            this.addBtn = new System.Windows.Forms.Button();
+            this.editeBtn = new System.Windows.Forms.Button();
+            this.DepNameTb = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -48,7 +48,7 @@ namespace EmployeeManagement
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DepList)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -57,47 +57,50 @@ namespace EmployeeManagement
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // DepList
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(434, 380);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1161, 405);
-            this.dataGridView1.TabIndex = 47;
+            this.DepList.BackgroundColor = System.Drawing.Color.White;
+            this.DepList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DepList.Location = new System.Drawing.Point(434, 380);
+            this.DepList.Name = "DepList";
+            this.DepList.RowHeadersWidth = 62;
+            this.DepList.RowTemplate.Height = 28;
+            this.DepList.Size = new System.Drawing.Size(1161, 405);
+            this.DepList.TabIndex = 47;
+            this.DepList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // button2
+            // addBtn
             // 
-            this.button2.BackColor = System.Drawing.Color.Teal;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(13, 505);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(144, 51);
-            this.button2.TabIndex = 42;
-            this.button2.Text = "ADD";
-            this.button2.UseVisualStyleBackColor = false;
+            this.addBtn.BackColor = System.Drawing.Color.Teal;
+            this.addBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addBtn.ForeColor = System.Drawing.Color.White;
+            this.addBtn.Location = new System.Drawing.Point(13, 505);
+            this.addBtn.Name = "addBtn";
+            this.addBtn.Size = new System.Drawing.Size(144, 51);
+            this.addBtn.TabIndex = 42;
+            this.addBtn.Text = "ADD";
+            this.addBtn.UseVisualStyleBackColor = false;
+            this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
             // 
-            // button1
+            // editeBtn
             // 
-            this.button1.BackColor = System.Drawing.Color.Turquoise;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(163, 505);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(142, 51);
-            this.button1.TabIndex = 41;
-            this.button1.Text = "UPDATE";
-            this.button1.UseVisualStyleBackColor = false;
+            this.editeBtn.BackColor = System.Drawing.Color.Turquoise;
+            this.editeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editeBtn.ForeColor = System.Drawing.Color.White;
+            this.editeBtn.Location = new System.Drawing.Point(163, 505);
+            this.editeBtn.Name = "editeBtn";
+            this.editeBtn.Size = new System.Drawing.Size(142, 51);
+            this.editeBtn.TabIndex = 41;
+            this.editeBtn.Text = "UPDATE";
+            this.editeBtn.UseVisualStyleBackColor = false;
+            this.editeBtn.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // DepNameTb
             // 
-            this.textBox1.Location = new System.Drawing.Point(18, 405);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(215, 26);
-            this.textBox1.TabIndex = 32;
+            this.DepNameTb.Location = new System.Drawing.Point(18, 405);
+            this.DepNameTb.Name = "DepNameTb";
+            this.DepNameTb.Size = new System.Drawing.Size(215, 26);
+            this.DepNameTb.TabIndex = 32;
             // 
             // label4
             // 
@@ -273,11 +276,11 @@ namespace EmployeeManagement
             this.Controls.Add(this.label10);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.DepList);
+            this.Controls.Add(this.addBtn);
+            this.Controls.Add(this.editeBtn);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.DepNameTb);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel2);
@@ -286,7 +289,7 @@ namespace EmployeeManagement
             this.Name = "Department";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Department";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DepList)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -301,11 +304,11 @@ namespace EmployeeManagement
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView DepList;
+        private System.Windows.Forms.Button addBtn;
+        private System.Windows.Forms.Button editeBtn;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox DepNameTb;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
