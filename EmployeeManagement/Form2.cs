@@ -12,11 +12,23 @@ namespace EmployeeManagement
 {
     public partial class Form2 : Form
     {
+        Functions Con;
         public Form2()
         {
             InitializeComponent();
+            Con = new Functions();
+            ShowEmp();
+            //GetDepartment();
         }
 
+
+        private void ShowEmp()
+        {
+            string Query = "Select * from EmployeeTbl";
+            EmpList.DataSource = Con.GetData(Query);
+        }
+
+       
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
@@ -43,6 +55,11 @@ namespace EmployeeManagement
         }
 
         private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
         {
 
         }
