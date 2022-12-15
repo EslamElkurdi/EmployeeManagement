@@ -35,7 +35,13 @@ namespace EmployeeManagement
             EmpDepartment.ValueMember = Con.GetData(Query).Columns["DepId"].ToString();
             EmpDepartment.DataSource = Con.GetData(Query);
         }
-       
+        public void clear()
+        {
+            EmpName.Text = "";
+            EmpGender.SelectedIndex = -1;
+            EmpDepartment.SelectedIndex = -1;
+            EmpSalary.Text = "";
+        }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
