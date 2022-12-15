@@ -18,7 +18,7 @@ namespace EmployeeManagement
             InitializeComponent();
             Con = new Functions();
             ShowEmp();
-            //GetDepartment();
+            GetDepartment();
         }
 
 
@@ -28,7 +28,15 @@ namespace EmployeeManagement
             EmpList.DataSource = Con.GetData(Query);
         }
 
+        private void GetDepartment()
+        {
+            string Query = "Select * from DepartTbl";
+            EmpDepartment.DisplayMember = Con.GetData(Query).Columns["DepName"].ToString();
+            EmpDepartment.ValueMember = Con.GetData(Query).Columns["DepId"].ToString();
+            EmpDepartment.DataSource = Con.GetData(Query);
+        }
        
+
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
