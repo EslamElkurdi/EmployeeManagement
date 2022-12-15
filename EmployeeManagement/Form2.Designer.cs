@@ -182,6 +182,9 @@ namespace EmployeeManagement
             // EmpGender
             // 
             this.EmpGender.FormattingEnabled = true;
+            this.EmpGender.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
             this.EmpGender.Location = new System.Drawing.Point(4, 351);
             this.EmpGender.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.EmpGender.Name = "EmpGender";
@@ -217,6 +220,7 @@ namespace EmployeeManagement
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(178, 22);
             this.dateTimePicker1.TabIndex = 65;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // button2
             // 
@@ -325,6 +329,7 @@ namespace EmployeeManagement
             this.EmpName.Name = "EmpName";
             this.EmpName.Size = new System.Drawing.Size(192, 22);
             this.EmpName.TabIndex = 54;
+            this.EmpName.TextChanged += new System.EventHandler(this.EmpName_TextChanged);
             // 
             // label3
             // 
