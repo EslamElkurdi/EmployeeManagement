@@ -64,31 +64,7 @@ namespace EmployeeManagement
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    if (CbEmployee.SelectedIndex == -1 || DayTb.Text == "" || PeriodTb.Text == "")
-            //    {
-            //        MessageBox.Show("Missing Data!!!");
-            //    }
-            //    else
-            //    {
-            //        period = PeriodTb.Value.Date.Month.ToString() + "-" + PeriodTb.Value.Date.Year.ToString();
-            //        int Amount = DSal * Convert.ToInt32(DayTb.Text);
-            //        int Days = Convert.ToInt32(DayTb.Text);
-            //        string Query = "insert into SalaryTbl values ({0},{1},'{2}',{3},'{4}')";
-            //        Query = string.Format(Query, EmpCb.SelectedValue.ToString(), Days, period, Amount, DateTime.Today.Date);
-            //        Con.SetData(Query);
-            //        ShowSalary();
-            //        MessageBox.Show("Salary Paid");
-            //        DayTb.Text = "";
-
-            //    }
-
-            //}
-            //catch (Exception Ex)
-            //{
-            //    MessageBox.Show(Ex.Message);
-            //}
+            
 
         
 

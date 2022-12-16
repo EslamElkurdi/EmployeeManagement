@@ -206,7 +206,7 @@ namespace EmployeeManagement
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            Salaries obj = new Salaries();
+             Salaries obj = new Salaries();
             obj.Show();
             this.Hide();
         }

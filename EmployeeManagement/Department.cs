@@ -28,7 +28,7 @@ namespace EmployeeManagement
 
 
 
-        int key = 0;
+        
         private void button1_Click(object sender, EventArgs e)
         {
             try
@@ -41,10 +41,11 @@ namespace EmployeeManagement
                 {
                     string Dep = DepNameTb.Text;
                     string Query = "Update DepartmentTb1 set DepName = '{0}' where DepId = {1}";
-                    Query = string.Format(Query, DepNameTb.Text, key);
+                    Query = string.Format(Query, DepNameTb.Text, Key);
                     con.SetData(Query);
-                    ShowListDepartment();
+                    
                     MessageBox.Show("Updated...");
+                    ShowListDepartment();
                     //clear();
                 }
             }
