@@ -86,8 +86,8 @@ namespace EmployeeManagement
                     string Emp = EmpName.Text;
                     string Gen = EmpGender.SelectedItem.ToString();
                     string Dep = EmpDepartment.SelectedValue.ToString();
-                    string DDb = dateTimePicker1.Value.ToString("yyyy-MM-dd");
-                    string jDate = dateTimePickerJoin.Value.ToString("yyyy-MM-dd");
+                    string DDb = DOBEMP.Value.ToString("yyyy-MM-dd");
+                    string jDate = JDate.Value.ToString("yyyy-MM-dd");
                     int Salary = Convert.ToInt32(EmpSalary.Text);
                     string Query = "insert into EmployeeTb1 values ('{0}','{1}','{2}','{3}','{4}','{5}')";
                     Query = string.Format(Query, Emp, Gen, Dep, DDb, jDate, Salary);
@@ -126,8 +126,8 @@ namespace EmployeeManagement
                     string Emp = EmpName.Text;
                     string Gen = EmpGender.SelectedItem.ToString();
                     string Dep = EmpDepartment.SelectedValue.ToString();
-                    string DDb = dateTimePicker1.Value.ToString("yyyy-MM-dd");
-                    string jDate = dateTimePickerJoin.Value.ToString("yyyy-MM-dd");
+                    string DDb = DOBEMP.Value.ToString("yyyy-MM-dd");
+                    string jDate = JDate.Value.ToString("yyyy-MM-dd");
                     int Salary = Convert.ToInt32(EmpSalary.Text);
                     string Query = "Update EmployeeTb1 set EmpName ='{0}', EmpGen ='{1}',EmpDep ='{2}', EmpDOB='{3}',EmpJDate='{4}',EmpSal='{5}' where EmpId={6}";
                     Query = string.Format(Query, Emp, Gen, Dep, DDb, jDate, Salary, key);
@@ -148,8 +148,8 @@ namespace EmployeeManagement
             EmpName.Text = EmpList.SelectedRows[0].Cells[1].Value.ToString();
             EmpGender.Text = EmpList.SelectedRows[0].Cells[2].Value.ToString();
             EmpDepartment.SelectedValue = EmpList.SelectedRows[0].Cells[3].Value.ToString();
-            dateTimePicker1.Text = EmpList.SelectedRows[0].Cells[4].Value.ToString();
-            dateTimePickerJoin.Text = EmpList.SelectedRows[0].Cells[5].Value.ToString();
+            DOBEMP.Text = EmpList.SelectedRows[0].Cells[4].Value.ToString();
+            JDate.Text = EmpList.SelectedRows[0].Cells[5].Value.ToString();
             EmpSalary.Text = EmpList.SelectedRows[0].Cells[6].Value.ToString();
 
             if (EmpName.Text == "")
@@ -216,6 +216,16 @@ namespace EmployeeManagement
             Form1 obj = new Form1();
             obj.Show();
             this.Hide();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -45,6 +45,35 @@ namespace EmployeeManagement
 
         }
 
+        int DSal = 0;
+        string period = "";
+
+
+        private void GetSal()
+        {
+            string Query = "select * from EmployeeTb1 where EmpId = {0}";
+            Query = string.Format(Query, CbEmployee.SelectedValue.ToString());
+            foreach (DataRow dr in Con.GetData(Query).Rows)
+            {
+                DSal = Convert.ToInt32(dr["EmpSal"].ToString());
+            }
+
+            if (DayAttend.Text == "")
+            {
+                salaryAmount.Text = "Rs  " + (d * DSal);
+            }
+            else if (Convert.ToInt32(DayAttend.Text) > 31)
+            {
+                MessageBox.Show("Days Can Not be Greater than 31");
+            }
+            else
+            {
+                d = Convert.ToInt32(DayAttend.Text);
+                salaryAmount.Text = "Rs  " + (d * DSal);
+            }
+        }
+
+
 
 
         private void label7_Click(object sender, EventArgs e)
@@ -62,12 +91,47 @@ namespace EmployeeManagement
 
         }
 
+        int d = 1;
         private void button2_Click(object sender, EventArgs e)
         {
-            
+            try
+            {
+                if (CbEmployee.SelectedIndex == -1 || DayAttend.Text == "" || salaryAmount.Text == "")
+                {
+                    MessageBox.Show("missing data!!!");
+                }
+                else
+                {
+                    period = PeriodDate.Value.Date.Month.ToString() + "-" + PeriodDate.Value.Date.Year.ToString();
+                    int amount = DSal * Convert.ToInt32(DayAttend.Text);
+                    int days = Convert.ToInt32(DayAttend.Text);
+                    string query = "insert into SalaryTb1 values ({0},{1},'{2}',{3},'{4}')";
+                    query = string.Format(query, CbEmployee.SelectedValue.ToString(), days, period, amount, DateTime.Today.Date);
+                    Con.SetData(query);
+                    ShowSalary();
+                    MessageBox.Show("salary paid");
+                    DayAttend.Text = "";
 
-        
+                }
 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+
+
+        }
+
+        private void periodTb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CbEmployee_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
-}
 }

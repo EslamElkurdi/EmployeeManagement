@@ -29,13 +29,11 @@ namespace EmployeeManagement
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.addbtn = new System.Windows.Forms.Button();
+            this.editeBtn = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -46,8 +44,7 @@ namespace EmployeeManagement
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.CbEmployee = new System.Windows.Forms.ComboBox();
-            this.textBoxDate = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.DayAttend = new System.Windows.Forms.TextBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -58,62 +55,45 @@ namespace EmployeeManagement
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.listSalary = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.deleteBtn = new System.Windows.Forms.Button();
+            this.PeriodDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.salaryAmount = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listSalary)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // dateTimePicker2
+            // addbtn
             // 
-            this.dateTimePicker2.CalendarMonthBackground = System.Drawing.Color.White;
-            this.dateTimePicker2.Location = new System.Drawing.Point(15, 364);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(178, 22);
-            this.dateTimePicker2.TabIndex = 44;
+            this.addbtn.BackColor = System.Drawing.Color.Teal;
+            this.addbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addbtn.ForeColor = System.Drawing.Color.White;
+            this.addbtn.Location = new System.Drawing.Point(16, 574);
+            this.addbtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.addbtn.Name = "addbtn";
+            this.addbtn.Size = new System.Drawing.Size(128, 41);
+            this.addbtn.TabIndex = 42;
+            this.addbtn.Text = "ADD";
+            this.addbtn.UseVisualStyleBackColor = false;
+            this.addbtn.Click += new System.EventHandler(this.button2_Click);
             // 
-            // dateTimePicker1
+            // editeBtn
             // 
-            this.dateTimePicker1.CalendarForeColor = System.Drawing.Color.Teal;
-            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.Color.Maroon;
-            this.dateTimePicker1.CalendarTitleForeColor = System.Drawing.Color.OrangeRed;
-            this.dateTimePicker1.CalendarTrailingForeColor = System.Drawing.SystemColors.Desktop;
-            this.dateTimePicker1.Location = new System.Drawing.Point(15, 421);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(178, 22);
-            this.dateTimePicker1.TabIndex = 43;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Teal;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(16, 574);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(128, 41);
-            this.button2.TabIndex = 42;
-            this.button2.Text = "ADD";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Turquoise;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(149, 574);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(126, 41);
-            this.button1.TabIndex = 41;
-            this.button1.Text = "UPDATE";
-            this.button1.UseVisualStyleBackColor = false;
+            this.editeBtn.BackColor = System.Drawing.Color.Turquoise;
+            this.editeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editeBtn.ForeColor = System.Drawing.Color.White;
+            this.editeBtn.Location = new System.Drawing.Point(149, 574);
+            this.editeBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.editeBtn.Name = "editeBtn";
+            this.editeBtn.Size = new System.Drawing.Size(126, 41);
+            this.editeBtn.TabIndex = 41;
+            this.editeBtn.Text = "UPDATE";
+            this.editeBtn.UseVisualStyleBackColor = false;
             // 
             // label8
             // 
@@ -141,7 +121,7 @@ namespace EmployeeManagement
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Teal;
-            this.label5.Location = new System.Drawing.Point(11, 395);
+            this.label5.Location = new System.Drawing.Point(12, 439);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(154, 25);
             this.label5.TabIndex = 33;
@@ -152,7 +132,7 @@ namespace EmployeeManagement
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Teal;
-            this.label3.Location = new System.Drawing.Point(11, 271);
+            this.label3.Location = new System.Drawing.Point(10, 270);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(154, 25);
             this.label3.TabIndex = 31;
@@ -221,25 +201,15 @@ namespace EmployeeManagement
             this.CbEmployee.Name = "CbEmployee";
             this.CbEmployee.Size = new System.Drawing.Size(200, 24);
             this.CbEmployee.TabIndex = 48;
+            this.CbEmployee.SelectedIndexChanged += new System.EventHandler(this.CbEmployee_SelectedIndexChanged);
             // 
-            // textBoxDate
+            // DayAttend
             // 
-            this.textBoxDate.Location = new System.Drawing.Point(15, 297);
-            this.textBoxDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBoxDate.Name = "textBoxDate";
-            this.textBoxDate.Size = new System.Drawing.Size(192, 22);
-            this.textBoxDate.TabIndex = 49;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::EmployeeManagement.Properties.Resources.WhatsApp_Image_2022_12_14_at_16_52_26;
-            this.pictureBox1.Location = new System.Drawing.Point(11, 127);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(91, 66);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 40;
-            this.pictureBox1.TabStop = false;
+            this.DayAttend.Location = new System.Drawing.Point(15, 297);
+            this.DayAttend.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DayAttend.Name = "DayAttend";
+            this.DayAttend.Size = new System.Drawing.Size(192, 22);
+            this.DayAttend.TabIndex = 49;
             // 
             // pictureBox4
             // 
@@ -343,26 +313,26 @@ namespace EmployeeManagement
             // 
             // listSalary
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.listSalary.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.listSalary.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.listSalary.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.listSalary.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.listSalary.ColumnHeadersHeight = 4;
             this.listSalary.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.listSalary.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.listSalary.DefaultCellStyle = dataGridViewCellStyle6;
             this.listSalary.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.listSalary.Location = new System.Drawing.Point(403, 259);
             this.listSalary.Name = "listSalary";
@@ -394,12 +364,63 @@ namespace EmployeeManagement
             this.listSalary.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.listSalary.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView1_CellContentClick);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::EmployeeManagement.Properties.Resources.salary;
+            this.pictureBox1.Location = new System.Drawing.Point(16, 143);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(69, 58);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 60;
+            this.pictureBox1.TabStop = false;
+            // 
+            // deleteBtn
+            // 
+            this.deleteBtn.BackColor = System.Drawing.Color.Red;
+            this.deleteBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteBtn.ForeColor = System.Drawing.Color.White;
+            this.deleteBtn.Location = new System.Drawing.Point(649, 574);
+            this.deleteBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.deleteBtn.Name = "deleteBtn";
+            this.deleteBtn.Size = new System.Drawing.Size(128, 41);
+            this.deleteBtn.TabIndex = 61;
+            this.deleteBtn.Text = "ADD";
+            this.deleteBtn.UseVisualStyleBackColor = false;
+            // 
+            // PeriodDate
+            // 
+            this.PeriodDate.Checked = true;
+            this.PeriodDate.FillColor = System.Drawing.Color.Teal;
+            this.PeriodDate.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.PeriodDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.PeriodDate.Location = new System.Drawing.Point(16, 366);
+            this.PeriodDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.PeriodDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.PeriodDate.Name = "PeriodDate";
+            this.PeriodDate.Size = new System.Drawing.Size(231, 48);
+            this.PeriodDate.TabIndex = 63;
+            this.PeriodDate.Value = new System.DateTime(2022, 12, 16, 8, 21, 58, 342);
+            // 
+            // salaryAmount
+            // 
+            this.salaryAmount.Location = new System.Drawing.Point(17, 466);
+            this.salaryAmount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.salaryAmount.Name = "salaryAmount";
+            this.salaryAmount.Size = new System.Drawing.Size(192, 22);
+            this.salaryAmount.TabIndex = 64;
+            this.salaryAmount.TextChanged += new System.EventHandler(this.periodTb_TextChanged);
+            // 
             // Salaries
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1200, 670);
+            this.Controls.Add(this.salaryAmount);
+            this.Controls.Add(this.PeriodDate);
+            this.Controls.Add(this.deleteBtn);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.listSalary);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.pictureBox4);
@@ -410,13 +431,10 @@ namespace EmployeeManagement
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.textBoxDate);
+            this.Controls.Add(this.DayAttend);
             this.Controls.Add(this.CbEmployee);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.addbtn);
+            this.Controls.Add(this.editeBtn);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -432,23 +450,20 @@ namespace EmployeeManagement
             this.Text = "Salaries";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listSalary)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button addbtn;
+        private System.Windows.Forms.Button editeBtn;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
@@ -459,7 +474,7 @@ namespace EmployeeManagement
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox CbEmployee;
-        private System.Windows.Forms.TextBox textBoxDate;
+        private System.Windows.Forms.TextBox DayAttend;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label13;
@@ -470,5 +485,9 @@ namespace EmployeeManagement
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2DataGridView listSalary;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button deleteBtn;
+        private Guna.UI2.WinForms.Guna2DateTimePicker PeriodDate;
+        private System.Windows.Forms.TextBox salaryAmount;
     }
 }
