@@ -121,6 +121,34 @@ namespace EmployeeManagement
             }
         }
 
+
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                if (DepNameTb.Text == "")
+                {
+                    MessageBox.Show("Missing Data!!!");
+                }
+                else
+                {
+                    string Dep = DepNameTb.Text;
+                    string Query = "Delete from DepartmentTb1 where Depid = {0}";
+                    Query = string.Format(Query, Key);
+                    con.SetData(Query);
+                    ShowListDepartment();
+                    MessageBox.Show("Department Deleted");
+                    DepNameTb.Text = "";
+                }
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.Message);
+            }
+        }
+
+
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             Form2 obj = new Form2();
@@ -148,5 +176,7 @@ namespace EmployeeManagement
             obj.Show();
             this.Hide();
         }
+
+        
     }
 }

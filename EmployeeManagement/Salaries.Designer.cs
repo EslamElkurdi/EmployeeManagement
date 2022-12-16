@@ -100,6 +100,7 @@ namespace EmployeeManagement
             this.button2.TabIndex = 42;
             this.button2.Text = "ADD";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -352,7 +353,8 @@ namespace EmployeeManagement
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.listSalary.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.listSalary.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.listSalary.ColumnHeadersHeight = 4;
+            this.listSalary.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -362,12 +364,12 @@ namespace EmployeeManagement
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.listSalary.DefaultCellStyle = dataGridViewCellStyle3;
             this.listSalary.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.listSalary.Location = new System.Drawing.Point(459, 259);
+            this.listSalary.Location = new System.Drawing.Point(403, 259);
             this.listSalary.Name = "listSalary";
             this.listSalary.RowHeadersVisible = false;
             this.listSalary.RowHeadersWidth = 51;
             this.listSalary.RowTemplate.Height = 24;
-            this.listSalary.Size = new System.Drawing.Size(533, 229);
+            this.listSalary.Size = new System.Drawing.Size(709, 229);
             this.listSalary.TabIndex = 59;
             this.listSalary.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.listSalary.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -380,7 +382,7 @@ namespace EmployeeManagement
             this.listSalary.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.listSalary.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listSalary.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.listSalary.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.listSalary.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.listSalary.ThemeStyle.HeaderStyle.Height = 4;
             this.listSalary.ThemeStyle.ReadOnly = false;
             this.listSalary.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
